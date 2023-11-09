@@ -1,0 +1,54 @@
+<%- include("partials/header.ejs") %>
+    <!-- <h2><%# sudokuGrid%></h2> -->
+    <main class="body">
+        <div class="mainhead">
+            <h1 class="headtext">Sudoku</h1>    
+           
+        </div>
+
+        <form action="/result" method="POST">
+            <div class="bg">
+                <table>
+                    <tbody>
+                        <% for (let i=0; i<9;i++){ %>
+                            <tr>
+                                <% for(let j=0; j<9;j++){ %>
+                                    <td>
+                                        <% if(sudokuTask[i][j]==0){ %>
+                                            <select id="sudokuCell-<%= i %>-<%= j %>"
+                                                name="sudokuCell-<%= i %>-<%= j %>" value="<%= sudokuTask[i][j] %>">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                                <option value="9">9</option>
+                                            </select>
+
+                                            <% } else { %>
+
+                                                <div class="sudokuCell-<%= i %> disabled"
+                                                    id="sudokuCell-<%= i %>-<%= j %>">
+                                                    <%= sudokuTask[i][j] %>
+                                                </div>
+                                                <!-- Include hidden input field for static numbers -->
+                                                <input class="disabled" type="hidden"
+                                                    name="sudokuCell-<%= i %>-<%= j %>" value="<%= sudokuTask[i][j] %>">
+                                                <% } %>
+                                    </td>
+                                    <% } %>
+                            </tr>
+                            <% } %>
+                    </tbody>
+                </table>
+            </div>
+            <button type="submit">Submit Answer</button>
+        </form>
+
+
+    </main>
+
+    <%- include("partials/footer.ejs") %>

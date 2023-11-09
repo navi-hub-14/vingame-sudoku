@@ -1,0 +1,211 @@
+html {
+    height: 150vh;
+}
+
+body {
+    background: radial-gradient(red, black);
+    background-repeat: no-repeat;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.headtext {
+    font-size: 3rem;
+}
+
+.scoreBd {
+    padding-block: 25px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: wheat;
+    padding-top: 50px;
+    width: 80%;
+    height: 80vh;
+    margin: auto;
+}
+.mainhead{
+    color: wheat;
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 20px;
+}
+.false *, .success *{
+   padding-block: 25px;
+}
+.false, .success{
+    text-align: center;
+}
+.success{
+    width: 100vw;
+      background: radial-gradient(green, black);
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* width: 70%; */
+}
+
+table {
+    margin: auto;
+    /* border-collapse:collapse; */
+    font-weight: bold;
+    text-align: center;
+}
+
+tbody {
+    border: solid 3px black;
+    margin: 3px;
+
+}
+
+button {
+    padding: 5px;
+    width: 30%;
+    margin-block: 20px;
+    background: black;
+    color: wheat;
+    border-radius: 20px;
+    border: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: inset 2px 2px 10px wheat, 3px 4px 10px black;
+}
+
+#sudokuCell-2-0,
+#sudokuCell-2-1,
+#sudokuCell-2-2,
+#sudokuCell-2-3,
+#sudokuCell-2-4,
+#sudokuCell-2-5,
+#sudokuCell-2-6,
+#sudokuCell-2-7,
+#sudokuCell-2-8 {
+    border-bottom: solid 3px rgb(35, 35, 35);
+}
+
+#sudokuCell-5-0,
+#sudokuCell-5-1,
+#sudokuCell-5-2,
+#sudokuCell-5-3,
+#sudokuCell-5-4,
+#sudokuCell-5-5,
+#sudokuCell-5-6,
+#sudokuCell-5-7,
+#sudokuCell-5-8 {
+    border-bottom: solid 3px rgb(50, 50, 50);
+}
+
+#sudokuCell-0-2,
+#sudokuCell-1-2,
+#sudokuCell-2-2,
+#sudokuCell-3-2,
+#sudokuCell-4-2,
+#sudokuCell-5-2,
+#sudokuCell-6-2,
+#sudokuCell-7-2,
+#sudokuCell-8-2 {
+    border-right: solid 3px rgb(50, 50, 50);
+}
+
+#sudokuCell-0-5,
+#sudokuCell-1-5,
+#sudokuCell-2-5,
+#sudokuCell-3-5,
+#sudokuCell-4-5,
+#sudokuCell-5-5,
+#sudokuCell-6-5,
+#sudokuCell-7-5,
+#sudokuCell-8-5 {
+    border-right: solid 3px rgb(50, 50, 50);
+}
+
+.bg {
+    background: white;
+    padding: 5px;
+    outline: 3px solid black;
+    outline-offset: -8px;
+}
+
+table tr td select{
+    width: 45px;
+    height: 40px;
+    padding: 5px;
+    text-align: center;
+    background: wheat;
+    font-weight: bold;
+    outline: none;
+    /* box-shadow: inset -1px -1px 5px black, inset 1px 1px 5px black; */
+    margin: 0;
+    
+    
+}
+
+table tr td .disabled {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* text-align: center; */
+    color: wheat;
+    background: black;
+    width: 45px;
+    height: 40px;
+    /* border: solid 1px white; */
+    margin:0;
+}
+
+.footer {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    color: wheat;
+    font-weight: bold;
+    letter-spacing: 1px;
+    background-color: black;
+    align-items: center;
+    justify-content: center;
+}
+
+/* @media screen and (max-width:500px) {
+    table tr td input {
+        width: 35px;
+        height: 30px;
+    }
+
+    table tr td .disabled {
+        width: 35px;
+        height: 30px;
+    }
+} */
+
+@media screen and (max-width:280px) {
+    .headtext {
+        font-size: 2rem;
+    }
+
+    table tr td input {
+        width: 10px;
+        height: 10px;
+    }
+
+    table tr td .disabled {
+        width: 20px;
+        height: 20px;
+    }
+
+    button {
+        width: 80%;
+    }
+}

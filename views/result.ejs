@@ -1,0 +1,19 @@
+
+<%- include("partials/header")  %>
+<div class="header">
+    <% if(result){ %>
+        <div class="success">
+            <h1>Congratulations</h1>
+            <h2>You Did It !!!</h2>
+        </div>
+   <% }else{ %> 
+    <%# if(step || locals.result){ %>
+    <div class="false">
+        <h1>Mistakes: <%= steps %> </h1>
+        <p>Go Back and check: <%= position %></p>
+    </div>
+    <% } %>
+    <button id="goback">Go Back</button>
+</div>
+<%# include("index.ejs") %>
+<%- include("partials/footer")  %>
