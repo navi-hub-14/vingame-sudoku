@@ -170,8 +170,8 @@ button {
 .bg {
     background: white;
     padding: 5px;
-    outline: 3px solid black;
-    outline-offset: -8px;
+    outline: 2px solid black;
+    outline-offset: -1px;
 }
 
 table tr td select{
@@ -182,7 +182,8 @@ table tr td select{
     background: wheat;
     font-weight: bold;
     outline: none;
-    box-shadow: inset -1px -1px 5px black, inset 1px 1px 5px black;
+    /* border: solid 1px black; */
+    box-shadow: inset -1px -1px 2px black, inset 1px 1px 2px black;
     margin: 0;
     
     
@@ -223,7 +224,7 @@ table tr td .disabled {
         height: 100px;
         overflow-y: auto;
         font-size: 8pt;
-        font-weight: 100;
+        font-weight: 500;
     }
     table tr td .disabled{
         width: 30px;
@@ -237,7 +238,7 @@ table tr td .disabled {
         color: black;
         padding: 0;
         font-size: 8pt;
-
+        font-weight: 500;
         margin: 0;
     }
  
