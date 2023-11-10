@@ -15,9 +15,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.get('/', async (req, res) => {
     try {
         const response = await axios.get("https://shadify.dev/api/sudoku/generator");
-        const sudokuGrid = response.data.grid;
         const sudokuTask = response.data.task;
-        console.log(sudokuGrid);
+        // const sudokuGrid = response.data.grid;
+        // console.log(sudokuGrid);
         res.render("index.ejs", {
             sudokuTask
         })
@@ -66,6 +66,6 @@ app.post("/result",async (req, res) => {
 
 
 
-app.listen(port, () => {
-    console.log(`Listening to the Port ${port}`);
+app.listen(process.env.PORT || port, () => {
+    console.log(`Listening on port ${port}`);
 })
