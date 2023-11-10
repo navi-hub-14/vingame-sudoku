@@ -27,6 +27,13 @@ app.get('/', async (req, res) => {
     }
 
 })
+
+
+app.get("/about", (req, res)=>{
+    res.render("about.ejs");
+})
+
+
 app.post("/result",async (req, res) => {
     const userData = [];
 

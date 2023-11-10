@@ -1,13 +1,50 @@
 html {
-    height: 150vh;
+    height: 110vh;
+    width: 100%;
 }
 
 body {
-    background: radial-gradient(red, black);
+    background: radial-gradient(rgb(201, 2, 2), black);
     background-repeat: no-repeat;
     font-family: Arial, Helvetica, sans-serif;
+    
+}
+nav{
+    font-size: 12pt;
+    height: 70px;
+    
 }
 
+nav ul{
+     display: flex;
+     align-items: center;
+     justify-content: right;
+     list-style: none;
+     padding-right: 50px;
+}
+nav ul li{
+   padding:15px;
+}
+nav ul li a{
+    text-decoration: none; color: wheat;
+
+}
+
+.about{
+    width: 70%;
+    color: wheat;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin: auto;
+}
+.about h1{
+    padding-block: 15px;
+}
+.about span{
+    color: rgb(249, 196, 97);
+    font-weight: bolder;
+}
 * {
     margin: 0;
     padding: 0;
@@ -58,7 +95,7 @@ form {
 
 table {
     margin: auto;
-    /* border-collapse:collapse; */
+    border-collapse:collapse;
     font-weight: bold;
     text-align: center;
 }
@@ -91,7 +128,7 @@ button {
 #sudokuCell-2-6,
 #sudokuCell-2-7,
 #sudokuCell-2-8 {
-    border-bottom: solid 3px rgb(35, 35, 35);
+    border-bottom: solid 2px rgb(255, 255, 255);
 }
 
 #sudokuCell-5-0,
@@ -103,7 +140,7 @@ button {
 #sudokuCell-5-6,
 #sudokuCell-5-7,
 #sudokuCell-5-8 {
-    border-bottom: solid 3px rgb(50, 50, 50);
+    border-bottom: solid 2px rgb(255, 255, 255);
 }
 
 #sudokuCell-0-2,
@@ -115,7 +152,7 @@ button {
 #sudokuCell-6-2,
 #sudokuCell-7-2,
 #sudokuCell-8-2 {
-    border-right: solid 3px rgb(50, 50, 50);
+    border-right: solid 2px rgb(255, 255, 255);
 }
 
 #sudokuCell-0-5,
@@ -127,7 +164,7 @@ button {
 #sudokuCell-6-5,
 #sudokuCell-7-5,
 #sudokuCell-8-5 {
-    border-right: solid 3px rgb(50, 50, 50);
+    border-right: solid 2px rgb(255, 255, 255);
 }
 
 .bg {
@@ -145,7 +182,7 @@ table tr td select{
     background: wheat;
     font-weight: bold;
     outline: none;
-    /* box-shadow: inset -1px -1px 5px black, inset 1px 1px 5px black; */
+    box-shadow: inset -1px -1px 5px black, inset 1px 1px 5px black;
     margin: 0;
     
     
@@ -178,19 +215,39 @@ table tr td .disabled {
     justify-content: center;
 }
 
-/* @media screen and (max-width:500px) {
-    table tr td input {
-        width: 35px;
-        height: 30px;
+@media screen and (max-width:500px) {
+    table{
+        margin: auto;
     }
-
-    table tr td .disabled {
-        width: 35px;
-        height: 30px;
+    tbody{
+        height: 100px;
+        overflow-y: auto;
+        font-size: 8pt;
+        font-weight: 100;
     }
-} */
+    table tr td .disabled{
+        width: 30px;
+        height: 30px;
+        text-align: left;
+      cursor: pointer;
+    }
+    table tr td select{
+        width:30px;
+        height: 30px;
+        color: black;
+        padding: 0;
+        font-size: 8pt;
 
-@media screen and (max-width:280px) {
+        margin: 0;
+    }
+ 
+  
+    button{
+        width: 60%;
+    }
+}
+
+/* @media screen and (max-width:280px) {
     .headtext {
         font-size: 2rem;
     }
@@ -198,8 +255,11 @@ table tr td .disabled {
     table tr td input {
         width: 10px;
         height: 10px;
+       
     }
 
+    
+    
     table tr td .disabled {
         width: 20px;
         height: 20px;
@@ -208,4 +268,4 @@ table tr td .disabled {
     button {
         width: 80%;
     }
-}
+} */
